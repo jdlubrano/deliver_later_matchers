@@ -1,3 +1,5 @@
+# NOTE: THIS GEM DOES NOT WORK YET AND IS NOT PUBLISHED TO RUBYGEMS
+
 # DeliverLaterMatchers
 
 RSpec matchers for testing that ActionMailer deliver_later is called for your
