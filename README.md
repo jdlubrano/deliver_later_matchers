@@ -1,5 +1,6 @@
 # DeliverLaterMatchers
 
+[![Build Status](https://travis-ci.org/jdlubrano/deliver_later_matchers.svg?branch=master)](https://travis-ci.org/jdlubrano/deliver_later_matchers)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d7f9f4691169769b1ac6/maintainability)](https://codeclimate.com/github/jdlubrano/deliver_later_matchers/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/d7f9f4691169769b1ac6/test_coverage)](https://codeclimate.com/github/jdlubrano/deliver_later_matchers/test_coverage)
 
