@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rspec/expectations'
+
 require 'deliver_later_matchers/version'
 require 'deliver_later_matchers/deliver_later'
 
@@ -28,6 +30,6 @@ module DeliverLaterMatchers
     supports_block_expectations
   end
 
-  alias_matcher :enqueue_email, :deliver_later
-  alias_matcher :have_enqueued_email, :deliver_later
+  RSpec::Matchers.alias_matcher :enqueue_email, :deliver_later
+  RSpec::Matchers.alias_matcher :have_enqueued_email, :deliver_later
 end

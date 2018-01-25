@@ -5,20 +5,12 @@ require 'deliver_later_matchers/version'
 Gem::Specification.new do |spec|
   spec.name          = 'deliver_later_matchers'
   spec.version       = DeliverLaterMatchers::VERSION
+  spec.licenses      = ['MIT']
   spec.authors       = ['Joel Lubrano']
   spec.email         = ['joel.lubrano@gmail.com']
 
   spec.summary       = 'RSpec matchers for testing that ActionMailers deliver_later'
   spec.homepage      = 'https://github.com/jdlubrano/deliver_later_matchers'
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -28,15 +20,15 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'actionmailer', '~> 5.1.4'
-  spec.add_dependency 'activejob', '~> 5.1.4'
+  spec.add_dependency 'actionmailer', '~> 5.0'
+  spec.add_dependency 'activejob', '~> 5.0'
   spec.add_dependency 'rspec-expectations', '~> 3.0'
   spec.add_dependency 'rspec-mocks', '~> 3.0'
-  spec.add_dependency 'rspec-rails', '~> 3.7.2'
+  spec.add_dependency 'rspec-rails', '~> 3.0'
 
   spec.add_development_dependency 'bundler', '~> 1.16'
-  spec.add_development_dependency 'byebug', '~> 9.1.0'
+  spec.add_development_dependency 'byebug', '~> 9.1'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'simplecov', '~> 0.15.1'
+  spec.add_development_dependency 'simplecov', '~> 0.15'
 end

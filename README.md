@@ -12,7 +12,9 @@ email messages.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'deliver_later_matchers'
+group :test do
+  gem 'deliver_later_matchers'
+end
 ```
 
 And then execute:
