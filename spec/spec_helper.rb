@@ -1,4 +1,11 @@
 require "bundler/setup"
+require 'active_job'
+require 'simplecov'
+
+SimpleCov.start do
+  add_filter "/spec/"
+end
+
 require "deliver_later_matchers"
 
 RSpec.configure do |config|
@@ -11,4 +18,13 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  config.before(:all) do
+    ActiveJob::Base.logger = nil
+  end
+
+  config.before(:each) do
+    ActiveJob::Base.queue_adapter = :test
+  end
 end
+

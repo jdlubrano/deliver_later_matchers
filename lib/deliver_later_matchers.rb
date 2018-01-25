@@ -1,5 +1,33 @@
-require "deliver_later_matchers/version"
+# frozen_string_literal: true
+
+require 'deliver_later_matchers/version'
+require 'deliver_later_matchers/deliver_later'
 
 module DeliverLaterMatchers
-  # Your code goes here...
+  extend RSpec::Matchers::DSL
+
+  matcher :deliver_later do |mailer_class, method_name|
+    matcher = DeliverLater.new(mailer_class, method_name)
+
+    match do |block|
+      matcher.matches?(block)
+    end
+
+    description do
+      matcher.description
+    end
+
+    chain :with do |*args|
+      matcher.with(*args)
+    end
+
+    failure_message do |block|
+      matcher.failure_message(block)
+    end
+
+    supports_block_expectations
+  end
+
+  alias_matcher :enqueue_email, :deliver_later
+  alias_matcher :have_enqueued_email, :deliver_later
 end
