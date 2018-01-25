@@ -5,6 +5,7 @@ require 'deliver_later_matchers/version'
 Gem::Specification.new do |spec|
   spec.name          = 'deliver_later_matchers'
   spec.version       = DeliverLaterMatchers::VERSION
+  spec.licenses      = ['MIT']
   spec.authors       = ['Joel Lubrano']
   spec.email         = ['joel.lubrano@gmail.com']
 
@@ -19,15 +20,15 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'actionmailer', '~> 5.0.0'
-  spec.add_dependency 'activejob', '~> 5.0.0'
+  spec.add_dependency 'actionmailer', '~> 5.0'
+  spec.add_dependency 'activejob', '~> 5.0'
   spec.add_dependency 'rspec-expectations', '~> 3.0'
   spec.add_dependency 'rspec-mocks', '~> 3.0'
   spec.add_dependency 'rspec-rails', '~> 3.0'
 
   spec.add_development_dependency 'bundler', '~> 1.16'
-  spec.add_development_dependency 'byebug', '~> 9.1.0'
+  spec.add_development_dependency 'byebug', '~> 9.1'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'simplecov', '~> 0.15.1'
+  spec.add_development_dependency 'simplecov', '~> 0.15'
 end
