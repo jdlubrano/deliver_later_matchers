@@ -28,6 +28,6 @@ module DeliverLaterMatchers
     supports_block_expectations
   end
 
-  alias_matcher :enqueue_email, :deliver_later
-  alias_matcher :have_enqueued_email, :deliver_later
+  RSpec::Matchers.alias_matcher :enqueue_email, :deliver_later
+  RSpec::Matchers.alias_matcher :have_enqueued_email, :deliver_later
 end
