@@ -28,6 +28,10 @@ module DeliverLaterMatchers
       self
     end
 
+    def failure_message(block)
+      "expected #{@mailer_class.name}.#{@method_name} to be delivered later"
+    end
+
     private
 
     def matching_job_exists?(jobs)
@@ -39,8 +43,15 @@ module DeliverLaterMatchers
     end
 
     def arguments_match?(job)
-      job_args = ::ActiveJob::Arguments.deserialize(job[:args])
-      RSpec::Mocks::ArgumentListMatcher.new(*mailer_args).args_match?(*job_args)
+      RSpec::Mocks::ArgumentListMatcher.new(*mailer_args).args_match?(*job_args(job))
+    end
+
+    # In the case where we match a mailer method that accepts
+    # arguments but the test does not call `with` on the matcher,
+    # we want to ignore the extra arguments passed to ActiveJob
+    # when we are trying to find our `deliver_later` job.
+    def job_args(job)
+      ::ActiveJob::Arguments.deserialize(job[:args])[0...mailer_args.size]
     end
 
     def mailer_args

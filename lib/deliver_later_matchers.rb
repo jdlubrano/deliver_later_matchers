@@ -17,6 +17,17 @@ module DeliverLaterMatchers
       matcher.description
     end
 
+    chain :with do |*args|
+      matcher.with(*args)
+    end
+
+    failure_message do |block|
+      matcher.failure_message(block)
+    end
+
     supports_block_expectations
   end
+
+  alias_matcher :enqueue_email, :deliver_later
+  alias_matcher :have_enqueued_email, :deliver_later
 end
