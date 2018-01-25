@@ -40,7 +40,7 @@ RSpec.describe DeliverLaterMatchers do
           ActiveJob::Base.queue_adapter = :async
 
           expect { expect { TestMailer.test_email.deliver_later }.to deliver_later(TestMailer, :test_email) }
-            .to raise_error(RuntimeError,  "To use DeliverLaterMatchers, set `ActiveJob::Base.queue_adpater = :test`.")
+            .to raise_error(RuntimeError,  "To use DeliverLaterMatchers, set `ActiveJob::Base.queue_adapter = :test`.")
         end
       end
 

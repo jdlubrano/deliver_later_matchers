@@ -69,7 +69,7 @@ module DeliverLaterMatchers
     def check_job_adapter
       return if queue_adapter.is_a?(::ActiveJob::QueueAdapters::TestAdapter)
 
-      raise RuntimeError, "To use DeliverLaterMatchers, set `ActiveJob::Base.queue_adpater = :test`."
+      raise RuntimeError, "To use DeliverLaterMatchers, set `ActiveJob::Base.queue_adapter = :test`."
     end
   end
 end
