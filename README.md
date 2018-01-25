@@ -48,7 +48,15 @@ user = User.create
 
 expect {
   MyMailer.welcome(user).deliver_later
-}.to have_enqueued_mail(MyMailer, :welcome).with(user)
+}.to enqueue_email(MyMailer, :welcome).with(user)
+
+# or
+
+user = User.create
+
+expect {
+  MyMailer.welcome(user).deliver_later
+}.to have_enqueued_email(MyMailer, :welcome).with(user)
 ```
 
 ## Development
