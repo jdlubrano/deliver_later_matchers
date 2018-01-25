@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    deliver_later_matchers (0.1.1)
-      actionmailer (~> 5.0)
-      activejob (~> 5.0)
+    deliver_later_matchers (0.1.2)
+      actionmailer (>= 4.0)
+      activejob (>= 4.0)
       rspec-expectations (~> 3.0)
       rspec-mocks (~> 3.0)
       rspec-rails (~> 3.0)
@@ -58,7 +58,7 @@ GEM
     method_source (0.9.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
-    minitest (5.11.1)
+    minitest (5.11.2)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     rack (2.0.3)

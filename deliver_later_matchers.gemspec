@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'actionmailer', '~> 5.0'
-  spec.add_dependency 'activejob', '~> 5.0'
+  spec.add_dependency 'actionmailer', '>= 4.0'
+  spec.add_dependency 'activejob', '>= 4.0'
   spec.add_dependency 'rspec-expectations', '~> 3.0'
   spec.add_dependency 'rspec-mocks', '~> 3.0'
   spec.add_dependency 'rspec-rails', '~> 3.0'
