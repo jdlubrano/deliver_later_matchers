@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rspec/expectations'
+
 require 'deliver_later_matchers/version'
 require 'deliver_later_matchers/deliver_later'
 
