@@ -1,5 +1,12 @@
 # DeliverLaterMatchers
 
+**This gem is no longer maintained because it's functionality was merged into
+[rspec-rails](https://github.com/rspec/rspec-rails)!**
+
+* [Matcher docs](https://www.rubydoc.info/gems/rspec-rails/RSpec%2FRails%2FMatchers:have_enqueued_mail)
+* [Source code](https://github.com/rspec/rspec-rails/blob/2f22bf33504c1908a3d9ef32f54da0179ebb0a15/lib/rspec/rails/matchers/have_enqueued_mail.rb)
+* [rspec-rails PR](https://github.com/rspec/rspec-rails/pull/2047)
+
 [![Gem Version](https://badge.fury.io/rb/deliver_later_matchers.svg)](https://badge.fury.io/rb/deliver_later_matchers)
 [![Build Status](https://travis-ci.org/jdlubrano/deliver_later_matchers.svg?branch=master)](https://travis-ci.org/jdlubrano/deliver_later_matchers)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d7f9f4691169769b1ac6/maintainability)](https://codeclimate.com/github/jdlubrano/deliver_later_matchers/maintainability)
